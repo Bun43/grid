@@ -1,0 +1,40 @@
+body {
+    background: grey;
+}
+/* on défiinit un nom pour utiloiser chaque élément dans le système grid area */
+.box01 {
+    background: red;
+    grid-area: box01;
+}
+.box02 {
+    background: green;
+    grid-area: box02;
+}
+.box03 {
+    background: violet;
+    grid-area: box03;
+}
+.box04 {
+    background: burlywood;
+    grid-area: box04;
+}
+.box05 {
+    background: cornflowerblue;
+    grid-area: box05;
+}
+.box06 {
+    background: yellow;
+    grid-area: box06;
+}
+/* on applique display grid sr l'élément où on va utiliser le système grid
+On définit la largeuur de colonne dans le grid avec grid-template-column et ligne grid-template-row
+On utilise la propriété grid temlate-areas pour placer chaque élément dans la grille. */
+#affichage {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-areas: "box01 box02 box04"
+                         ". box03 ."
+                         "box05 . box06";
+    column-gap: 20px;
+    row-gap: 20px;
+}
